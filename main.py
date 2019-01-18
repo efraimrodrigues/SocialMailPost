@@ -18,14 +18,12 @@ EMAIL_ACCOUNT = "YOUR@MAIL.COM"
 # Use 'INBOX' to read inbox.  Note that whatever folder is specified, 
 # after successfully running this script all emails in that folder 
 # will be marked as read.
-#EMAIL_FOLDER = '"Erros SI3"'
 EMAIL_FOLDER = 'INBOX'
 
 
 def process_mailbox(M,client):
     """
-    Do something with emails messages in the folder.  
-    For the sake of this example, print some headers.
+    Reads the new email message and forwards it to the user's Facebook messenger
     """
 
     rv, data = M.search(None, 'UNSEEN')
